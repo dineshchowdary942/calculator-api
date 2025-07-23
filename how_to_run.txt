@@ -1,0 +1,46 @@
+
+Step 1: Set Up a Virtual Environment
+
+1. Create a virtual environment:
+
+       python -m venv .venv
+
+2. Activate the virtual environment:
+
+       .\.venv\Scripts\activate
+
+We should now see `(.venv)` at the beginning of your terminal prompt.
+
+Step 2: Install Required Libraries
+
+Install the necessary Python packages:
+
+       pip install fastapi uvicorn
+
+Step 3: Run the Calculator API
+
+Start the FastAPI app using Uvicorn:
+
+       uvicorn calculator_api:app --reload
+
+You should see output like this:
+
+       Uvicorn running on http://127.0.0.1:8000
+
+This means the API is now running locally.
+
+
+Step 4: Access the API
+
+1. Open your browser and go to:
+
+       http://127.0.0.1:8000/docs
+
+2. Use the Swagger UI to test the calculator endpoints:
+
+   - `/add`
+   - `/subtract`
+   - `/multiply`
+   - `/divide`
+
+Each endpoint accepts two numbers (`a` and `b`) and returns the result.
